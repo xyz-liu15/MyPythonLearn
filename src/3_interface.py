@@ -56,9 +56,15 @@ chain_plus = (
     {"today" : RunnableLambda(lambda x: "今天是" + x["content"])}
 )
 
+# RunnableParallel 并行运行
 parallel = RunnableParallel(
     chain_1 = chain,
     chain_2 = chain_plus
 )
 
 print(parallel.invoke({"content": "2023年10月10日"}))
+
+
+# RunnableLambda
+runnable_lambda = RunnableLambda(lambda x: "你好，" + x["content"])
+print(runnable_lambda.invoke({"content": "吴刚"}))
