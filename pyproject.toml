@@ -10,4 +10,5 @@ dependencies = [
     "langchain-deepseek>=0.1.4",
     "langchain-openai>=0.3.28",
     "python-dotenv>=1.1.1",
+    "rich>=14.1.0",
 ]
